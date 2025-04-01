@@ -154,6 +154,7 @@ async function main() {
 	}
 }
 
+
 // Execution
 if (process.env.NODE_ENV !== 'production') {
 	console.log('🔧 Running in development mode');
