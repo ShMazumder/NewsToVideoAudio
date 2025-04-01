@@ -1,0 +1,28 @@
+{
+  "name": "News Recorder",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    // "lscr.io/linuxserver/ffmpeg:latest": {}
+    // "ghcr.io/devcontainers/features/ffmpeg": {
+    //   "version": "latest",
+    //   "installDependencies": true
+    // },
+    // "ghcr.io/devcontainers-contrib/features/chrome:latest": {}
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm install && apt-get update && apt-get install -y libgbm-dev libasound2",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "runArgs": [
+    "--cap-add=SYS_ADMIN",
+    "--ipc=host"
+  ],
+  "remoteUser": "node"
+}
